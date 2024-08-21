@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+## 🚀 React + Vite Sass kit
+A simple, flexible and batteries-included starter template to kickstart your React projects with ease.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### The Stack includes
+- [Typescript](https://www.typescriptlang.org/) for type safe and scalable React app
+- [React.js](https://react.dev/) as the framework for building frontend application
+- [Tanstack Router](https://tanstack.com/router/latest) for type-safe and flexible client-side routing for React app
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Shadcn UI](https://ui.shadcn.com/) as the component library
+- [Vite](https://vitejs.dev/guide/) for fast and optimized development and production build
+- [Biome](https://biomejs.dev/) for formatting and linting
+- [pnpm](https://pnpm.io/) as fast, efficient package-manager
 
-Currently, two official plugins are available:
+#### Installation
+1. Clone the repository ```git clone https://github.com/rahu1gg/react-vite-stack.git```
+2. Navigate to the directory ```cd react-vite-stack```
+3. Install dependencies ```pnpm install```
+4. Starting the development server ```pnpm dev```
+5. This will launch the app in development mode. Open [http://localhost:5143](http://localhost:5143) to view it in the browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Make sure you have __Node.js__ and __pnpm__ installed in your machine
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+#### Project Structure
+```
+.
+├── public
+│   └── ...
+├── src
+│   ├── client
+│   │   ├── providers
+│   │   └── store
+│   ├── components
+│   │   ├── global
+│   │   └── ui
+│   ├── lib
+│   │   └── utils
+│   ├── routes
+│   │   ├── __root.tsx
+│   │   └── index.tsx
+│   ├── styles
+│   │   └── main.css
+│   ├── main.tsx
+│   └── ...
+├── .gitignore
+├── biome.json
+├── components.json
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+├── vite.config.ts
+└── ...
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+#### Support & Contribute
+If you found this project helpful or enjoyed using it, please consider giving it a ⭐️ on GitHub! It helps others find the project and motivates us to keep improving.
