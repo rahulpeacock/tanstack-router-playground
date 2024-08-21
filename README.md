@@ -6,7 +6,7 @@ A simple, flexible and batteries-included starter template to kickstart your Rea
 - [React.js](https://react.dev/) as the framework for building frontend application
 - [Tanstack Router](https://tanstack.com/router/latest) for type-safe and flexible client-side routing for React app
 - [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Shadcn UI](https://ui.shadcn.com/) as the component library
+- [Shadcn UI](https://ui.shadcn.com/) as the UI component library
 - [Vite](https://vitejs.dev/guide/) for fast and optimized development and production build
 - [Biome](https://biomejs.dev/) for formatting and linting
 - [pnpm](https://pnpm.io/) as fast, efficient package-manager
