@@ -1,4 +1,4 @@
-## 🚀 React + Vite Sass kit
+## ⚛️ React + Vite Sass kit
 A simple, flexible and batteries-included starter template to kickstart your React projects with ease.
 
 #### The Stack includes
