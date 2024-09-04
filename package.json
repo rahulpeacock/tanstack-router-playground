@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "format": "pnpm biome format --write ./src",
-    "lint": "pnpm biome lint ./src --apply",
-    "check": "pnpm biome check ./src --apply"
+    "format": "biome format --write ./src",
+    "lint": "biome lint --write ./src",
+    "check": "biome check --write ./src",
+    "vault:pull": "npx dotenv-vault pull development .env.development.local",
+    "vault:push": "npx dotenv-vault push development .env.development.local"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.1",
