@@ -4,7 +4,7 @@
     "enabled": false
   },
   "files": {
-    "ignore": ["node_modules/**/*", "dist/**/*", "src/routeTree.gen.ts", ".vercel/**/*"]
+    "ignore": ["node_modules/**/*", "dist/**/*", ".next/**/*", "src/routeTree.gen.ts", ".vercel/**/*", "out/**/*"]
   },
   "vcs": {
     "enabled": true,
@@ -25,14 +25,13 @@
         "useKeyWithClickEvents": "off",
         "useKeyWithMouseEvents": "off"
       }
-    },
-    "ignore": ["src/exceptions/errors.ts"]
+    }
   },
   "formatter": {
-    "ignore": ["configuration-schema.json"],
     "enabled": true,
     "indentStyle": "space",
-    "lineWidth": 150
+    "lineWidth": 150,
+    "lineEnding": "lf"
   },
   "javascript": {
     "formatter": {
