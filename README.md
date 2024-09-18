@@ -33,7 +33,7 @@ A simple, flexible and batteries-included starter template to kickstart your Rea
 │   │   ├── global
 │   │   └── ui
 │   ├── lib
-│   │   └── utils
+│   │   └── utils.ts
 │   ├── routes
 │   │   ├── __root.tsx
 │   │   └── index.tsx
