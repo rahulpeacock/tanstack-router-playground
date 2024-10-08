@@ -3,7 +3,7 @@ A simple, flexible and batteries-included starter template to kickstart your Rea
 
 #### The Stack includes
 - [Typescript](https://www.typescriptlang.org/) for type safe and scalable React app
-- [React.js](https://react.dev/) as the framework for building frontend application
+- [React.js](https://react.dev/) as the library for building frontend application
 - [Tanstack Router](https://tanstack.com/router/latest) for type-safe and flexible client-side routing for React app
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [Shadcn UI](https://ui.shadcn.com/) as the UI component library
@@ -12,7 +12,7 @@ A simple, flexible and batteries-included starter template to kickstart your Rea
 - [pnpm](https://pnpm.io/) as fast, efficient package-manager
 
 #### Installation
-1. Clone the repository ```git clone https://github.com/rahu1gg/react-vite-stack.git```
+1. Clone the repository ```git clone https://github.com/rahulpeacock/react-vite-stack.git```
 2. Navigate to the directory ```cd react-vite-stack```
 3. Install dependencies ```pnpm install```
 4. Starting the development server ```pnpm dev```
