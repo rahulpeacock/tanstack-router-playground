@@ -5,7 +5,7 @@ export const Route = createFileRoute('/about')({
     <div>
       Hello /about!{' '}
       <div>
-        <Link to='/'>Home</Link>
+        <Link to='/'>Back to Home</Link>
       </div>
     </div>
   ),
