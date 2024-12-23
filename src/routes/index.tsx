@@ -1,9 +1,28 @@
 import { Button } from '@/components/ui/button';
+import { sleep } from '@/lib/utils';
 import { Link, createFileRoute, linkOptions } from '@tanstack/react-router';
 import { Home, Text } from 'lucide-react';
 import { PostIdIntro } from './$user_id';
 
 export const Route = createFileRoute('/')({
+  beforeLoad: async () => {
+    console.log('start of beforeLoad');
+    await sleep(5000);
+    console.log('end of beforeLoad');
+    return {
+      test: 'custom-test',
+    };
+  },
+  loader: async (ctx) => {
+    console.log('start of loader');
+    await sleep(5000);
+    console.log('end of loader');
+    return {
+      ...ctx.context,
+      hello: 'world',
+    };
+  },
+  pendingComponent: () => <div className='text-yellow-300'>loader - loading...</div>,
   component: Index,
 });
 
