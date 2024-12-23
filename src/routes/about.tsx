@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { Link, createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/about')({
@@ -5,7 +6,15 @@ export const Route = createFileRoute('/about')({
     <div>
       Hello /about!{' '}
       <div>
-        <Link to='/'>Back to Home</Link>
+        <Button asChild>
+          <Link to='/'>Back to Home</Link>
+        </Button>
+        <Button asChild>
+          <Link to='/posts'>Posts</Link>
+        </Button>
+        <Button asChild>
+          <Link to='/posts/hello'>Hello</Link>
+        </Button>
       </div>
     </div>
   ),
