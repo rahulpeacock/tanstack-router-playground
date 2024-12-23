@@ -16,6 +16,7 @@ import { Route as LayoutImport } from './routes/_layout'
 import { Route as UseridImport } from './routes/$user_id'
 import { Route as IndexImport } from './routes/index'
 import { Route as PostsIndexImport } from './routes/posts.index'
+import { Route as SearchProductImport } from './routes/search/product'
 import { Route as LayoutHelloImport } from './routes/_layout/hello'
 import { Route as LayoutFirstImport } from './routes/_layout/first'
 import { Route as LayoutPathlessImport } from './routes/_layout/_pathless'
@@ -53,6 +54,12 @@ const IndexRoute = IndexImport.update({
 const PostsIndexRoute = PostsIndexImport.update({
   id: '/posts/',
   path: '/posts/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SearchProductRoute = SearchProductImport.update({
+  id: '/search/product',
+  path: '/search/product',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -163,6 +170,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutHelloImport
       parentRoute: typeof LayoutImport
     }
+    '/search/product': {
+      id: '/search/product'
+      path: '/search/product'
+      fullPath: '/search/product'
+      preLoaderRoute: typeof SearchProductImport
+      parentRoute: typeof rootRoute
+    }
     '/posts/': {
       id: '/posts/'
       path: '/posts'
@@ -240,6 +254,7 @@ export interface FileRoutesByFullPath {
   '/second': typeof layoutTwoSecondRoute
   '/first': typeof LayoutFirstRoute
   '/hello': typeof LayoutHelloRoute
+  '/search/product': typeof SearchProductRoute
   '/posts': typeof PostsIndexRoute
   '/hello/world': typeof LayoutHelloWorldRoute
   '/posts/hello/world': typeof PostsHelloWorldRoute
@@ -255,6 +270,7 @@ export interface FileRoutesByTo {
   '/second': typeof layoutTwoSecondRoute
   '/first': typeof LayoutFirstRoute
   '/hello': typeof LayoutHelloRoute
+  '/search/product': typeof SearchProductRoute
   '/posts': typeof PostsIndexRoute
   '/hello/world': typeof LayoutHelloWorldRoute
   '/posts/hello/world': typeof PostsHelloWorldRoute
@@ -272,6 +288,7 @@ export interface FileRoutesById {
   '/_layout/_pathless': typeof LayoutPathlessRouteWithChildren
   '/_layout/first': typeof LayoutFirstRoute
   '/_layout/hello': typeof LayoutHelloRoute
+  '/search/product': typeof SearchProductRoute
   '/posts/': typeof PostsIndexRoute
   '/_layout/hello_/world': typeof LayoutHelloWorldRoute
   '/posts/hello/world': typeof PostsHelloWorldRoute
@@ -289,6 +306,7 @@ export interface FileRouteTypes {
     | '/second'
     | '/first'
     | '/hello'
+    | '/search/product'
     | '/posts'
     | '/hello/world'
     | '/posts/hello/world'
@@ -303,6 +321,7 @@ export interface FileRouteTypes {
     | '/second'
     | '/first'
     | '/hello'
+    | '/search/product'
     | '/posts'
     | '/hello/world'
     | '/posts/hello/world'
@@ -318,6 +337,7 @@ export interface FileRouteTypes {
     | '/_layout/_pathless'
     | '/_layout/first'
     | '/_layout/hello'
+    | '/search/product'
     | '/posts/'
     | '/_layout/hello_/world'
     | '/posts/hello/world'
@@ -332,6 +352,7 @@ export interface RootRouteChildren {
   LayoutRoute: typeof LayoutRouteWithChildren
   AboutRoute: typeof AboutRoute
   layoutTwoSecondRoute: typeof layoutTwoSecondRoute
+  SearchProductRoute: typeof SearchProductRoute
   PostsIndexRoute: typeof PostsIndexRoute
   PostsHelloWorldRoute: typeof PostsHelloWorldRoute
   PostsHelloIndexRoute: typeof PostsHelloIndexRoute
@@ -343,6 +364,7 @@ const rootRouteChildren: RootRouteChildren = {
   LayoutRoute: LayoutRouteWithChildren,
   AboutRoute: AboutRoute,
   layoutTwoSecondRoute: layoutTwoSecondRoute,
+  SearchProductRoute: SearchProductRoute,
   PostsIndexRoute: PostsIndexRoute,
   PostsHelloWorldRoute: PostsHelloWorldRoute,
   PostsHelloIndexRoute: PostsHelloIndexRoute,
@@ -363,6 +385,7 @@ export const routeTree = rootRoute
         "/_layout",
         "/about",
         "/(layout-two)/second",
+        "/search/product",
         "/posts/",
         "/posts/hello/world",
         "/posts/hello/"
@@ -403,6 +426,9 @@ export const routeTree = rootRoute
     "/_layout/hello": {
       "filePath": "_layout/hello.tsx",
       "parent": "/_layout"
+    },
+    "/search/product": {
+      "filePath": "search/product.tsx"
     },
     "/posts/": {
       "filePath": "posts.index.tsx"
